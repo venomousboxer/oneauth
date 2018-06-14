@@ -18,7 +18,7 @@ function DisconnectTwitter(req, res) {
         models.UserTwitter.destroy({
             where: {userId: req.user.id}
         })
-            .then(function (result) {
+            .then((result) => {
                 return res.redirect('/users/me')
             })
             .catch((err) => {

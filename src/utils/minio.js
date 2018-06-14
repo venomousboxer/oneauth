@@ -16,7 +16,7 @@ function deleteObject(bucket, key) {
     } else if (typeof bucket !== 'string') {
         throw new Error('key not a string')
     }
-    minioClient.deleteObject({Bucket: bucket, Key: key},function (err, data) {
+    minioClient.deleteObject({Bucket: bucket, Key: key}, (err, data) => {
       if (err) {
         Raven.captureException(err)
         throw err;

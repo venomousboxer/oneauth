@@ -22,7 +22,7 @@ function authnOrAuthzGoogle(req, res, next) {
 
 router.get('/', passport.authenticate('google'))
 
-router.get('/callback', authnOrAuthzGoogle, function (req, res, next) {
+router.get('/callback', authnOrAuthzGoogle, (req, res, next) => {
     res.redirect('/users/me')
 })
 

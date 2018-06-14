@@ -15,7 +15,7 @@ function DisconnectGoogle(req, res) {
         models.UserGoogle.destroy({
             where: {userId: req.user.id}
         })
-            .then(function (result) {
+            .then((result) => {
                 return res.redirect('/users/me')
             })
             .catch((err) => {

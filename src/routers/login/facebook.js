@@ -28,7 +28,7 @@ function authnOrAuthzFacebook(req, res, next) {
 
 router.get('/', passport.authenticate('facebook', {scope: ['email']}))
 
-router.get('/callback', authnOrAuthzFacebook, function (req, res, next) {
+router.get('/callback', authnOrAuthzFacebook, (req, res, next) => {
     //Add flash for success
     res.redirect('/users/me')
 })

@@ -30,7 +30,7 @@
     </div>
 </form>
 <script>
-    $(function(){
+    $(() => {
         let params = (new URL(document.location)).searchParams;
         let url = params.get('returnTo')
         $('#redirect-input').val(url)

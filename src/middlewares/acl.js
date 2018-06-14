@@ -7,7 +7,7 @@ function ensureAdmin(req, res, next) {
 }
 
 function ensureRole(role) {
-    return function (req, res, next) {
+    return (req, res, next) => {
         if (req.user.role === role) {
             next()
         } else {

@@ -18,7 +18,7 @@ function DisconnectFacebook(req, res) {
         models.UserFacebook.destroy({
             where: {userId: req.user.id}
         })
-            .then(function (result) {
+            .then((result) => {
                 return res.redirect('/users/me')
             })
             .catch((err) => {
